@@ -1,23 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, nb">
   <head>
-    <title>Home</title>
+    <title>Konventering</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+    <header>
+    </header>
     <main>
-      <h1>Home page</h1>
+      <form action="">
+        <fieldset>
+          <legend><strong>Konventering</strong></legend>
+            <label for="unitInput">
+              Skriv inn en tall verdi
+              <input type="number" name="unitInput" id="unitInput" placeholder="For eksempel 555">
+            </label>
+
+            <label for="unitFrom">
+              Konventering fra
+              <select name="unitFrom" id="unitFrom" class="cursorCus">
+                <option value="SEC">SEK</option>
+                <option value="MIN">MIN</option>
+                <option value="HOUR">TIME</option>
+              </select>
+            </label>
+
+            <label for="unitTo">
+              Konventering til
+              <select name="unitTo" id="unitTo" class="cursorCus">
+                <option value="SEC">SEK</option>
+                <option value="MIN">MIN</option>
+                <option value="HOUR">TIME</option>
+              </select>
+            </label>
+
+            <button id="convertButton">Konventer</button>
+            <p id="displayResult"></p>
+        </fieldset>
+      </form>
     </main>
+    <footer></footer>
   </body>
 </html>
